@@ -1,0 +1,497 @@
+/* ==========================================================================
+   SYNSEERA Design System — CSS Custom Properties
+   Source: Figma file KzBp3ibxvenqiD28OC5DOd
+   Theme: Dark mode only
+   ========================================================================== */
+
+:root {
+
+  /* --------------------------------------------------------------------------
+     COLORS — Background
+     -------------------------------------------------------------------------- */
+
+  --color-bg-page-start:    #020618;   /* gradient start/end */
+  --color-bg-page-mid:      #0f172b;   /* gradient midpoint */
+  --color-bg-darkest:       #080e21;   /* cards, inputs, footer */
+  --color-bg-darker:        #0b1120;   /* checklist panels, nested cards */
+  --color-bg-dark:          #0f2238;   /* deepest surface, text-on-teal contrast */
+  --color-bg-card:          #1e2330;   /* elevated cards, inactive step circles */
+  --color-bg-header:        rgba(20, 24, 36, 0.8);   /* main navbar */
+  --color-bg-subheader:     rgba(20, 24, 36, 0.5);   /* step progress bar */
+  --color-bg-overlay:       rgba(255, 255, 255, 0.05); /* subtle hover/overlay */
+  --color-bg-overlay-md:    rgba(255, 255, 255, 0.1);  /* icon container bg */
+  --color-bg-info:          rgba(194, 206, 226, 0.2);  /* info banner bg */
+
+  /* --------------------------------------------------------------------------
+     COLORS — Brand & Accent
+     -------------------------------------------------------------------------- */
+
+  --color-brand-teal:       #38c2d4;   /* primary CTA, active states, dots */
+  --color-brand-teal-soft:  #5bc4c4;   /* step labels, active text */
+  --color-brand-blue:       #7eb1fc;   /* logo tagline */
+  --color-brand-cyan:       #00d1ff;   /* gradient end, highlighted numbers */
+
+  --color-accent-blue:      #2563eb;   /* selected card border */
+  --color-accent-blue-bg:   rgba(37, 99, 235, 0.1);   /* selected card fill */
+  --color-accent-blue-dark: #0052cc;   /* gradient start on icon containers */
+
+  --color-info-bg:          rgba(56, 194, 212, 0.1);  /* info banner/badge bg */
+  --color-info-border:      rgba(56, 194, 212, 0.1);  /* info banner border */
+  --color-info-text:        rgba(56, 194, 212, 0.5);  /* info banner title */
+
+  /* --------------------------------------------------------------------------
+     COLORS — Text
+     -------------------------------------------------------------------------- */
+
+  --color-text-white:       #ffffff;
+  --color-text-primary:     #d1d5dc;   /* labels, body */
+  --color-text-secondary:   #99a1af;   /* subtitles, helper text */
+  --color-text-muted:       #6a7282;   /* inactive steps, optional labels */
+  --color-text-muted-alt:   #90a1b9;   /* event wizard inactive, footer status */
+  --color-text-placeholder: rgba(255, 255, 255, 0.5); /* input placeholders */
+  --color-text-on-teal:     #0f2238;   /* text on teal CTA buttons */
+  --color-text-on-dark:     #ffffff;
+
+  /* --------------------------------------------------------------------------
+     COLORS — Border
+     -------------------------------------------------------------------------- */
+
+  --color-border-subtle:    rgba(255, 255, 255, 0.05);  /* card edges */
+  --color-border-default:   rgba(255, 255, 255, 0.1);   /* inputs, dividers */
+  --color-border-medium:    rgba(255, 255, 255, 0.2);   /* upload zones */
+  --color-border-step:      #e2e8f0;                    /* event wizard step line */
+  --color-border-footer:    rgba(129, 130, 131, 0.25);  /* footer top border */
+  --color-border-teal:      rgba(56, 194, 212, 0.1);    /* outline button border */
+
+  /* --------------------------------------------------------------------------
+     COLORS — Semantic
+     -------------------------------------------------------------------------- */
+
+  --color-error:            #fb2c36;   /* required asterisk (registration) */
+  --color-error-alt:        #ff6467;   /* required asterisk (event wizard) */
+  --color-success:          #38c2d4;   /* verification, confirmed states */
+
+  /* --------------------------------------------------------------------------
+     GRADIENTS
+     -------------------------------------------------------------------------- */
+
+  --gradient-page-bg:
+    linear-gradient(133deg, #020618 0%, #0f172b 50%, #020618 100%);
+
+  --gradient-progress:
+    linear-gradient(180deg, #0052cc 0%, #00d1ff 100%);
+
+  --gradient-icon-container:
+    linear-gradient(to bottom, #0052cc, #00d1ff);
+
+  --gradient-progress-track:
+    linear-gradient(90deg, #1e2330 0%, #1e2330 100%);
+
+  /* --------------------------------------------------------------------------
+     SHADOWS
+     -------------------------------------------------------------------------- */
+
+  --shadow-cta:
+    0px 10px 15px rgba(0, 82, 204, 0.2),
+    0px 4px 6px rgba(0, 82, 204, 0.2);
+
+  --shadow-cta-teal:
+    0px 10px 15px -3px rgba(56, 194, 212, 0.2),
+    0px 4px 6px -4px rgba(56, 194, 212, 0.2);
+
+  --shadow-step-active:
+    0px 10px 15px -3px rgba(91, 196, 196, 0.2),
+    0px 4px 6px -4px rgba(91, 196, 196, 0.2);
+
+  --shadow-footer:
+    0px -4px 12px rgba(0, 0, 0, 0.02);
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY
+     -------------------------------------------------------------------------- */
+
+  --font-family-base:       'Inter', 'Noto Sans Arabic', sans-serif;
+  --font-family-arabic:     'Noto Sans Arabic', sans-serif;
+
+  /* Size scale */
+  --font-size-2xs:          9.6px;    /* logo tagline */
+  --font-size-xs:           10px;     /* step labels in event wizard */
+  --font-size-sm:           12px;     /* captions, optional labels, nav buttons */
+  --font-size-base:         14px;     /* labels, body, button text */
+  --font-size-md:           16px;     /* input values, primary body */
+  --font-size-lg:           18px;     /* section headings, highlighted numbers */
+  --font-size-xl:           20px;     /* logo wordmark */
+  --font-size-2xl:          24px;     /* card headings */
+  --font-size-3xl:          30px;     /* page headings (H1) */
+
+  /* Weight scale */
+  --font-weight-regular:    400;
+  --font-weight-medium:     500;
+  --font-weight-semibold:   600;
+  --font-weight-bold:       700;
+  --font-weight-black:      900;
+
+  /* Line heights */
+  --line-height-tight:      1;
+  --line-height-snug:       1.2;
+  --line-height-normal:     1.4;
+  --line-height-relaxed:    1.5;
+
+  /* Letter spacing */
+  --tracking-tight:         0;
+  --tracking-logo:          4px;        /* SYNSEERA wordmark */
+  --tracking-tagline:       1.1px;      /* logo tagline */
+  --tracking-step:          1px;        /* event wizard step labels */
+  --tracking-button:        1.2px;      /* footer buttons (uppercase) */
+  --tracking-button-wide:   1.4px;      /* Save Draft / Continue */
+
+  /* --------------------------------------------------------------------------
+     SPACING
+     -------------------------------------------------------------------------- */
+
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-5:    20px;
+  --space-6:    24px;
+  --space-7:    28px;
+  --space-8:    32px;
+  --space-10:   40px;
+  --space-12:   48px;
+  --space-16:   64px;
+  --space-20:   80px;
+
+  /* --------------------------------------------------------------------------
+     BORDER RADIUS
+     -------------------------------------------------------------------------- */
+
+  --radius-xs:    8px;
+  --radius-sm:    10px;   /* icon container inner */
+  --radius-md:    14px;   /* inputs, cards, buttons */
+  --radius-lg:    16px;   /* large panels */
+  --radius-full:  9999px; /* pills, step circles */
+
+  /* --------------------------------------------------------------------------
+     LAYOUT
+     -------------------------------------------------------------------------- */
+
+  --layout-sidebar-width:   256px;
+  --layout-page-width:      1260px;
+  --layout-panel-width:     1019px;
+  --layout-navbar-height:   80px;        /* with border: ~85px */
+  --layout-stepbar-height:  65px;
+  --layout-footer-height:   80px;
+  --layout-progress-height: 4px;
+
+  /* --------------------------------------------------------------------------
+     COMPONENTS — Input
+     -------------------------------------------------------------------------- */
+
+  --input-height:           50px;
+  --input-padding-x:        16px;
+  --input-padding-y:        12px;
+  --input-icon-size:        18px;
+  --input-icon-inset:       12px;
+  --input-bg:               var(--color-bg-darkest);
+  --input-border:           1px solid var(--color-border-default);
+  --input-radius:           var(--radius-md);
+  --input-color:            var(--color-text-white);
+  --input-placeholder:      var(--color-text-placeholder);
+
+  /* --------------------------------------------------------------------------
+     COMPONENTS — Button (primary CTA)
+     -------------------------------------------------------------------------- */
+
+  --btn-primary-bg:         var(--color-brand-teal);
+  --btn-primary-color:      var(--color-text-on-teal);
+  --btn-primary-height:     56px;
+  --btn-primary-radius:     var(--radius-md);
+  --btn-primary-shadow:     var(--shadow-cta);
+  --btn-primary-font-size:  var(--font-size-md);
+  --btn-primary-weight:     var(--font-weight-bold);
+
+  /* Button (pill / outline) */
+  --btn-outline-border:     2px solid var(--color-border-teal);
+  --btn-outline-color:      var(--color-brand-teal);
+  --btn-outline-height:     44px;
+  --btn-outline-radius:     var(--radius-full);
+  --btn-outline-tracking:   var(--tracking-button-wide);
+
+  /* Button (ghost) */
+  --btn-ghost-bg:           rgba(255, 255, 255, 0.05);
+  --btn-ghost-border:       1px solid rgba(255, 255, 255, 0.1);
+  --btn-ghost-radius:       var(--radius-full);
+
+  /* --------------------------------------------------------------------------
+     COMPONENTS — Step circle
+     -------------------------------------------------------------------------- */
+
+  --step-circle-size:       32px;
+  --step-circle-active-bg:  var(--color-brand-teal);
+  --step-circle-inactive-bg:var(--color-bg-card);
+  --step-circle-active-color:   var(--color-text-white);
+  --step-circle-inactive-color: var(--color-text-muted);
+  --step-label-active:      var(--color-brand-teal-soft);
+  --step-label-inactive:    var(--color-brand-teal-soft);
+
+  /* Event wizard steps (larger, with white bg) */
+  --step-wizard-size:           40px;
+  --step-wizard-active-bg:      var(--color-brand-teal-soft);
+  --step-wizard-active-color:   var(--color-bg-dark);
+  --step-wizard-inactive-bg:    #ffffff;
+  --step-wizard-inactive-color: var(--color-text-muted-alt);
+  --step-wizard-label-active:   var(--color-brand-teal-soft);
+  --step-wizard-label-inactive: var(--color-text-muted-alt);
+  --step-wizard-connector-color:#e2e8f0;
+
+}
+
+/* ==========================================================================
+   Global base styles
+   ========================================================================== */
+
+body {
+  background: var(--gradient-page-bg);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Typography utilities
+   ========================================================================== */
+
+.text-logo-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-logo);
+  color: var(--color-text-white);
+}
+
+.text-logo-tagline {
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--tracking-tagline);
+  text-transform: uppercase;
+  color: var(--color-brand-blue);
+  opacity: 0.8;
+}
+
+.text-page-heading {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 36px;
+  color: var(--color-text-white);
+  text-align: center;
+}
+
+.text-section-heading {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 28px;
+  color: var(--color-text-white);
+}
+
+.text-card-heading {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+  color: var(--color-text-white);
+}
+
+.text-label {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 20px;
+  color: var(--color-text-primary);
+}
+
+.text-body {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+  color: var(--color-text-secondary);
+}
+
+.text-caption {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 16px;
+  color: var(--color-text-secondary);
+}
+
+.text-required {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-error);
+}
+
+.text-optional {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Layout utilities
+   ========================================================================== */
+
+.page-bg {
+  background: var(--gradient-page-bg);
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--color-bg-darkest);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.card-nested {
+  background: var(--color-bg-darker);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+/* ==========================================================================
+   Component utilities
+   ========================================================================== */
+
+.input {
+  height: var(--input-height);
+  background: var(--input-bg);
+  border: var(--input-border);
+  border-radius: var(--input-radius);
+  padding: var(--input-padding-y) var(--input-padding-x);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--input-color);
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.input-with-icon {
+  padding-left: calc(var(--input-icon-inset) + var(--input-icon-size) + var(--input-icon-inset));
+}
+
+.btn-primary {
+  height: var(--btn-primary-height);
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-radius: var(--btn-primary-radius);
+  box-shadow: var(--btn-primary-shadow);
+  font-size: var(--btn-primary-font-size);
+  font-weight: var(--btn-primary-weight);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.btn-outline {
+  height: var(--btn-outline-height);
+  background: transparent;
+  color: var(--btn-outline-color);
+  border: var(--btn-outline-border);
+  border-radius: var(--btn-outline-radius);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--tracking-button-wide);
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-8);
+}
+
+.btn-ghost {
+  background: var(--btn-ghost-bg);
+  border: var(--btn-ghost-border);
+  border-radius: var(--btn-ghost-radius);
+  color: var(--color-text-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-3);
+}
+
+.selection-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.selection-card[aria-selected="true"],
+.selection-card.selected {
+  background: var(--color-accent-blue-bg);
+  border: 2px solid var(--color-accent-blue);
+}
+
+.info-banner {
+  background: var(--color-bg-info);
+  border: 1px solid var(--color-info-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--layout-navbar-height);
+  background: var(--color-bg-header);
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  z-index: 100;
+}
+
+.navbar-progress {
+  height: var(--layout-progress-height);
+  background: var(--gradient-progress);
+}
+
+.sidebar {
+  width: var(--layout-sidebar-width);
+  background: var(--color-bg-darkest);
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--layout-footer-height);
+  background: var(--color-bg-darkest);
+  border-top: 1px solid var(--color-border-footer);
+  box-shadow: var(--shadow-footer);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-10);
+}
